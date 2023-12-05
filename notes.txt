@@ -1,0 +1,42 @@
+Toki
+
+Dataset preprocessing tasks:
+1. Import the dataset using pandas
+2. First convert categorical features ( mane string value jegula ache. You will notice that, random text na, unique 5/6 ta text e ache full column e). So first get the number of unique texts in a feature(column). pd.unique emon kichu ache of course. Then map each string to a unique number. Mane 5 ta unique text thakle, all texts ke 0-4 er moddhe map korbo.
+** in one dataset, there is no text, so this step is not even needed there
+2. Then check if there is any null value in column, fill it with avg / somthing. Fillna() emon ekta function ache
+3. Not convert the pandas df to an array. Simple ek line er function ache
+4. Now split the last column of the array fot the label array and the rest for traininh
+4. Normalize the training array. Simple function call.np.standard / minmax normalization ache
+5. Ranking: etao simple. Mutual_info_classif nam er ekta function ache, ota use korle per column er ranking ber kore dey info gain er formula diye. Sort kore top k ta feature nilei hobe. Remember,Ekhane sorting er time e column wr index ta somehow save rakha lagbe, naile bujha jabe na, kon rank kon column er
+6. Now ei k ta feature wala full training dataet er array ta  ke test train split korte hobe. Otar function o ache. Scikit learn er.
+7. Erpor logistic regression er function likhe model banano
+These are the general steps.
+Gpt + copilot onek help korbe eshobe 🙂
+
+
+Sameen
+
+Getting ~80% accuracy ~0.75 F1 with Logistic Regression on Telco-Customer-Churn dataset. Without feature selection
+Dataset Preprocessing
+1. split into test train
+compute the mean and std of train data. (will be useful in step 3)
+2. handle missing values
+if numerical data, drop the row/ replace with mean/mode/median
+if categorical data, replace with the new category "UNKNOWN_"+col_name/drop the row/most frequent class
+3. Feature selection
+find mutual information for each column and pick top K
+4. Normalization
+if numerical data and not just two values (like 0/1), min-max normalization, or z-score normalization (use train data's mean and std)
+5. Converting Strings/Categories to Numbers
+ONE HOT ENCODING
+if categorical data and 2 classes, replace with 0/1
+if categorical data and more than 2 classes, one hot encoding
+DO THIS:
+Nationality | Is_French | Is_German | Is_Spanish
+French | 1 | 0 | 0
+German | 0 | 1 | 0
+Spanish | 0 | 0 | 1
+drop the Nationality column after one hot encoding
+DON'T DO THIS:
+replace French with 0, German with 1, and Spanish with 2. It will imply that Spanish is worth more than French and German.
