@@ -29,7 +29,9 @@ if categorical data, replace with the new category "UNKNOWN_"+col_name/drop the 
 3. Feature selection
 find mutual information for each column and pick top K
 4. Normalization
+
 if numerical data and not just two values (like 0/1), min-max normalization, or z-score normalization (use train data's mean and std)
+
 5. Converting Strings/Categories to Numbers
 ONE HOT ENCODING
 if categorical data and 2 classes, replace with 0/1
