@@ -15,6 +15,15 @@ Dataset preprocessing tasks:
 7. Erpor logistic regression er function likhe model banano
 These are the general steps.
 Gpt + copilot onek help korbe eshobe 🙂
+--------------
+Adaboost er last e , per model theke asha class gula ke -1 and 1 e convert kore nish.
+Mane 0 ke -1, 1 ke 1 e.
+
+Tarpor weighted sum niye > 0 hole 1 , naile 0 
+
+Eta korish.
+
+Naile kaj korena adaboost
 
 
 Sameen
