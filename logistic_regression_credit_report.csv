@@ -1,0 +1,4 @@
+,Accuracy,Sensitivity,Specificity,Precision,False Discovery Rate,F1
+Logistic Regression Test,0.9721883386191754,0.0,1.0,0.0,0.0,0.0
+,Accuracy,Sensitivity,Specificity,Precision,False Discovery Rate,F1
+Logistic Regression Train,0.9769413774171902,0.0,1.0,0.0,0.0,0.0
