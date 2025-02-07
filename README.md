@@ -1,4 +1,4 @@
-# Logistic Regression and AdaBoost for Classification
+# Logistic Regression and AdaBoost Data Classifier
 
 Implementation of a `Logistic Regression (LR)` classifier and use it within `AdaBoost` algorithm.
 The python notebook `solve.ipynb` contains the necessary code to implement the models and evaluate them on different datasets.
